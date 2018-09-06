@@ -1,0 +1,3 @@
+([('MojeRachunki',
+   '/Users/lukasz/Desktop/Katalog/MojeRachunki/dist/MojeRachunki',
+   'EXECUTABLE')],)
