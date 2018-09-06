@@ -120,7 +120,7 @@ class PageOne(Frame):
             canvas.after(3500, lambda: app.destroy())
 
         else:
-            db = shelve.open('bazadanychTwojeRachunki',  writeback=True)
+            db = shelve.open('databaseMyBills',  writeback=True)
             db[nn] = [kk, dd]
             db.close()
             n.delete(0, END)
@@ -152,7 +152,7 @@ class PageTwo(Frame):
         listbox = Listbox(self)
         listbox.grid(row=2, column=1, pady=10)
 
-        db=shelve.open('bazadanychTwojeRachunki', writeback=True)
+        db=shelve.open('databaseMyBills', writeback=True)
         for item in db:
             listbox.insert(END, item)
         db.close()
@@ -169,7 +169,7 @@ class PageTwo(Frame):
         button1.grid(row=4, column=1, sticky=E)
 
     def koniec(self, lb):
-        db=shelve.open('bazadanychTwojeRachunki', writeback=True)
+        db=shelve.open('databaseMyBills', writeback=True)
         cs=lb.get(ACTIVE)
         del db[cs]
         lb.delete(ANCHOR)
@@ -195,7 +195,7 @@ class PageThree(Frame):
         self.grid_columnconfigure(5, minsize=165)
         self.grid_columnconfigure(1, minsize=100)
 
-        db = shelve.open('bazadanychTwojeRachunki',  writeback=True)
+        db = shelve.open('databaseMyBills',  writeback=True)
         i = 3
         label = Label(self, text='Things to pay:', font=('Avenir Next', 22), bg='#19A56F', fg='#FFFFFF')
         label.grid(row=0, columnspan=6, sticky=EW, )
