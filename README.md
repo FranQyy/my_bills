@@ -4,4 +4,4 @@ Let's collect all your bills in one place. The MyBills application would provide
 
 MyBills uses Python 3.6 and Tkinter GUI.
 
-![MyBills App]()
+![MyBills App](https://github.com/FranQyy/my_bills/blob/master/MyBillsPhoto1.png)
